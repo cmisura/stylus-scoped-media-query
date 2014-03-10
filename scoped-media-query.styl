@@ -1,0 +1,35 @@
+//###############################################################
+// SCOPE MEDIA QUERY                                           ##
+//###############################################################
+    
+scope-media-query( queries... )
+
+    max = length( queries )
+    min = 1
+
+    for query in ( min..max )
+
+        if query % 2 == 1
+
+            threshold  = queries[(query - 1)]
+            selector   = queries[query]
+
+            @media threshold
+                {selector} 
+                    {block}
+
+
+//###############################################################
+// USAGE                                                       ##
+//###############################################################
+/*  
++scope-media-query( 
+    '(min-width : 30em)', '.content', 
+    '(min-width : 90em)', '.aside' )
+    
+    .new-class
+        border 1px solid blue
+
+    .another-class
+        width 50%
+*/
