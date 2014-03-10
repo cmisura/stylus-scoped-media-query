@@ -24,7 +24,7 @@ scope-media-query( queries... )
                     {block}
 ```
 
-# Sample Usage:
+### Sample Usage:
 
 ``` Stylus
  +scope-media-query( 
@@ -39,7 +39,7 @@ scope-media-query( queries... )
 
 ```
 
-# Sample Output:
+### Sample Output:
 
 ``` CSS
 @media (min-width : 30em) {
